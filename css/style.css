@@ -39,39 +39,10 @@ p {
   clear:both;
 }
 .one-half, .one-third, .one-fourth, .two-thirds {
-  width:96%;
   float:left;
   position: relative;
   min-height: 1px;
   margin: 0 2% 20px;
-}
-
-@media (min-width:768px) {
-  .container {
-    width: 750px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    width:970px;
-  }
-  .one-half {
-    width:46%;
-  }
-  .one-third {
-    width:29.3333%;
-  }
-  .one-fourth {
-    width:21%;
-  }
-  .two-thirds {
-    width: 58.666%;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    width:1170px;
-  }
 }
 /* HEADER */
 header {
@@ -95,7 +66,7 @@ header nav ul > li {
 header nav ul > li.btn-outline {
   padding:10px 15px;
   border:2px solid #fff;
-  border-radius:4px;
+  border-radius:2px;
 }
 header nav ul > li.btn-outline:hover {
   background:#fff;
@@ -109,7 +80,6 @@ header nav ul > li.btn-outline:hover > a {
 }
 header .hero {
   text-align: left;
-  display:block;
   position: relative;
 }
 header .hero h1 {
@@ -124,10 +94,54 @@ header .hero p{
   margin:10px 0 40px;
 }
 header .hero img {
-  dipslay: block;
+  display: block;
   margin 3em auto 0;
 }
-
+/* MEDIA QUERIES */
+@media all (max-width: 600px){
+  .container {
+    width:98%;
+  }
+  .hero {
+    text-align: center;
+    display:block !important!;
+  }
+  .hero h1 {
+    font-size: 36px;
+    margin: 10px auto 10px;
+  }
+  header nav ul > li {
+    margin: 5px;
+  }
+  .hero-text {
+    width: 90%;
+    clear:both;
+  }
+  .hero-screenshot {
+    width: 90%;
+    margin:auto;
+  }
+}
+@media all (min-width: 601px) and (min-width: 1300px) {
+.hero {
+  display:inline-flex;
+}
+  .container {
+    width:1200px;
+  }
+  .one-half {
+    width:46%;
+  }
+  .one-third, .hero-text {
+    width:29.3333%;
+  }
+  .one-fourth {
+    width:21%;
+  }
+  .two-thirds, .hero-screenshot {
+    width: 58.666%;
+  }
+}
 /* BUTTONS */
 .btn {
   border-radius:2px;
