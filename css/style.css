@@ -98,13 +98,13 @@ header .hero img {
   margin 3em auto 0;
 }
 /* MEDIA QUERIES */
-@media all (max-width: 600px){
+@media all and (max-width: 600px){
   .container {
     width:98%;
   }
   .hero {
     text-align: center;
-    display:block !important!;
+    display:block !important;
   }
   .hero h1 {
     font-size: 36px;
@@ -122,7 +122,7 @@ header .hero img {
     margin:auto;
   }
 }
-@media all (min-width: 601px) and (min-width: 1300px) {
+@media all and (min-width: 601px) and (min-width: 1300px) {
 .hero {
   display:inline-flex;
 }
