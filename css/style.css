@@ -24,6 +24,7 @@ p {
 
 /* GRID */
 .container {
+  width: 98%;
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
@@ -61,7 +62,7 @@ header nav ul {
 header nav ul > li {
   list-style-type:none;
   display:inline-block;
-  margin: 0 15px;
+  margin: 0 5px;
 }
 header nav ul > li.btn-outline {
   padding:10px 15px;
@@ -79,7 +80,8 @@ header nav ul > li.btn-outline:hover > a {
   color:#34495e;
 }
 header .hero {
-  text-align: left;
+  display: block;
+  text-align: center;
   position: relative;
 }
 header .hero h1 {
@@ -93,41 +95,25 @@ header .hero p{
   font-weight:100;
   margin:10px 0 40px;
 }
+header .hero-text {
+  width: 90%;
+  }
+header .hero-screenshot {
+  width: 90%;
+  margin:auto;
+}
 header .hero img {
   display: block;
   margin 3em auto 0;
 }
 /* MEDIA QUERIES */
-@media all and (max-width: 600px){
-  .container {
-    width:98%;
-  }
-  .hero {
-    text-align: center;
-    display:block !important;
-  }
-  .hero h1 {
-    font-size: 36px;
-    margin: 10px auto 10px;
-  }
-  header nav ul > li {
-    margin: 5px;
-  }
-  .hero-text {
-    width: 90%;
-    clear:both;
-  }
-  .hero-screenshot {
-    width: 90%;
-    margin:auto;
-  }
-}
-@media all and (min-width: 601px) and (min-width: 1300px) {
-.hero {
+@media screen and (min-width: 700px) {
+header .hero {
+  text-align: left;
   display:inline-flex;
 }
   .container {
-    width:1200px;
+    width:900px;
   }
   .one-half {
     width:46%;
