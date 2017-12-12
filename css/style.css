@@ -96,10 +96,10 @@ header .hero p{
   margin:10px 0 40px;
 }
 header .hero-text {
-  width: 90%;
+  width: 100%;
   }
 header .hero-screenshot {
-  width: 90%;
+  width: 100%;
   margin:auto;
 }
 header .hero img {
@@ -107,25 +107,35 @@ header .hero img {
   margin 3em auto 0;
 }
 /* MEDIA QUERIES */
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 768px){
 header .hero {
   text-align: left;
   display:inline-flex;
 }
   .container {
-    width:900px;
+    width:600px;
   }
   .one-half {
     width:46%;
   }
-  .one-third, .hero-text {
+  .one-third, header .hero-text {
     width:29.3333%;
   }
   .one-fourth {
     width:21%;
   }
-  .two-thirds, .hero-screenshot {
+  .two-thirds, header .hero-screenshot {
     width: 58.666%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container {
+    width:970px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width:1170px;
   }
 }
 /* BUTTONS */
