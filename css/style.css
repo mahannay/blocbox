@@ -24,7 +24,7 @@ p {
 
 /* GRID */
 .container {
-  width: 98%;
+  width: 90%;
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
@@ -53,6 +53,12 @@ header {
 header nav {
   padding:1em 0;
 }
+.one-half {
+  width:46%;
+}
+.sign-up {
+  display:none;
+}
 header nav ul {
   display:inline;
   text-align:right;
@@ -64,7 +70,7 @@ header nav ul > li {
   display:inline-block;
   margin: 0 5px;
 }
-header nav ul > li.btn-outline {
+header nav ul > li.btn-outline, .sign-in {
   padding:10px 15px;
   border:2px solid #fff;
   border-radius:2px;
@@ -79,41 +85,42 @@ header nav ul > li > a {
 header nav ul > li.btn-outline:hover > a {
   color:#34495e;
 }
-header .hero {
+.hero {
   display: block;
   text-align: center;
   position: relative;
 }
-header .hero h1 {
-  font-size:48px;
+.hero h1 {
+  font-size:28px;
   font-weight: normal;
-  margin:95px 0 0;
+  margin:40px 0 0;
 }
-header .hero p{
-  font-size:18px;
-  line-height:26px;
+.hero p{
+  font-size:16px;
+  line-height:20px;
   font-weight:100;
   margin:10px 0 40px;
 }
-header .hero-text {
+.hero-text {
   width: 100%;
   }
-header .hero-screenshot {
-  width: 100%;
-  margin:auto;
+.hero-screenshot {
+  display:block;
+  margin-top:40px;
+  text-align: center;
 }
-header .hero img {
-  display: block;
-  margin 3em auto 0;
+.screenshot {
+  max-width: 90%;
 }
 /* MEDIA QUERIES */
 @media screen and (min-width: 768px){
 header .hero {
   text-align: left;
   display:inline-flex;
+  margin:auto;
 }
   .container {
-    width:600px;
+    width:760px;
   }
   .one-half {
     width:46%;
@@ -127,10 +134,29 @@ header .hero {
   .two-thirds, header .hero-screenshot {
     width: 58.666%;
   }
+  .sign-up {
+    display:inline;
+  }
+  .hero h1 {
+    font-size:36px;
+    line-height: 44px;
+  }
+  .hero p {
+    font-size:18px;
+    line-height: 24px;
+  }
+  .sign-in {
+    padding:0px;
+    border:none;
+  }
 }
 @media screen and (min-width: 992px) {
   .container {
     width:970px;
+  }
+  .hero h1 {
+    font-size:48px;
+    line-height: 60px;
   }
 }
 @media screen and (min-width: 1200px) {
