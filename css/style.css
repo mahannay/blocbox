@@ -49,10 +49,9 @@ p {
 header {
   color: #fff;
   background: url("../images/ovalbackground.png") no-repeat;
-  background-size:100% auto;
   /*background-image: linear-gradient(-77deg, #D8EAEA 0%, #007373 51%);*/
   overflow:hidden;
-  height:720px;
+  height:780px;
 }
 header nav {
   padding:1em 0;
@@ -91,6 +90,7 @@ header nav ul > li.btn-outline:hover > a {
 }
 .hero {
   display: block;
+  width:90%;
 }
 .hero h1 {
   font-size:28px;
@@ -103,19 +103,20 @@ header nav ul > li.btn-outline:hover > a {
   font-weight:100;
   margin:10px 0 40px;
 }
-.hero-text {
+.one-third {
   display:inline-block;
-  float:left;
-  margin-top:50px;
+  margin:30px 20px 0;
+  text-align:center;
+  float:none;
 }
-.hero-screenshot {
+.two-thirds {
   display:inline-block;
-  margin-top:40px;
-  text-align: right;
-  float:right;
+  float:none;
+  margin: 40px 0 0;
 }
 .screenshot {
-  max-width: 100%;
+  max-width: 95%;
+  margin:auto;
 }
 /* BUTTONS */
 .btn {
@@ -126,6 +127,7 @@ header nav ul > li.btn-outline:hover > a {
   padding: 15px 30px;
   background: #fff;
   box-shadow: 0px 2px 0px 0px rgba(0,0,0,.5);
+  margin:auto;
 }
 /* BENEFITS */
 .benefits {
@@ -347,22 +349,27 @@ footer .logo{
   .container {
     width:750px;
   }
+  header {
+    height:500px;
+  }
   .hero {
     text-align:left;
-    display:inline-flex;
-    justify-content:center;
   }
   .one-half {
     width:46%;
   }
-  .one-third, header .hero-text {
+  .one-third {
     width:29.3333%;
+    margin-top:50px;
+    float:left;
   }
   .one-fourth {
     width:21%;
   }
-  .two-thirds, header .hero-screenshot {
+  .two-thirds {
     width: 58.666%;
+    float:right;
+    margin-top: 80px;
   }
   .sign-up {
     display:inline;
@@ -387,6 +394,9 @@ footer .logo{
 @media screen and (min-width: 992px) {
   .container {
     width:970px;
+  }
+  header {
+    height:600px;
   }
   .hero h1 {
     font-size:48px;
@@ -426,5 +436,9 @@ footer .logo{
 @media screen and (min-width: 1200px) {
   .container {
     width:1170px;
+  }
+  .header {
+    background-size: 100% auto;
+    height:780px;
   }
 }
