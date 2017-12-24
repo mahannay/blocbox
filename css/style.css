@@ -39,7 +39,7 @@ p {
 .container:after {
   clear:both;
 }
-.one-half, .one-third, .one-fourth, .two-thirds {
+.one-half, .one-third, .one-fourth, .two-thirds, .one-third-body {
   float:left;
   position: relative;
   min-height: 1px;
@@ -104,19 +104,19 @@ header nav ul > li.btn-outline:hover > a {
   margin:10px 0 40px;
 }
 .one-third {
-  display:inline-block;
+  display:block;
   margin:30px 20px 0;
   text-align:center;
   float:none;
 }
 .two-thirds {
-  display:inline-block;
+  display:block;
   float:none;
   margin: 40px 0 0;
 }
 .screenshot {
   max-width: 95%;
-  margin:auto;
+  margin:auto 2.5%;
 }
 /* BUTTONS */
 .btn {
@@ -165,7 +165,7 @@ header nav ul > li.btn-outline:hover > a {
 }
 .pricing ul {
   margin:0 auto;
-  padding:2em 0;
+  padding:1em 0;
 }
 .pricing ul li {
   list-style-type:none;
@@ -174,12 +174,9 @@ header nav ul > li.btn-outline:hover > a {
   padding:0 15px 15px;
   background: #E2E2E2;
   box-shadow 0px 2px 4px 0px rgba(0,0,0,0.2);
-  min-height:200px;
+  min-height:350px;
   margin-top:25px;
   position:relative;
-}
-.box.middle {
-
 }
 .box h3 {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
@@ -221,6 +218,7 @@ header nav ul > li.btn-outline:hover > a {
   bottom:20px;
   left:20px;
   right:20px;
+  margin-top:20px;
 }
 .small {
    font-size: 12px;
@@ -282,22 +280,24 @@ header nav ul > li.btn-outline:hover > a {
 }
 /* SIGN UP */
 .signup {
-  background-image: url("..images/Oval.png") top center no-repeat;
+  background: url("../images/Oval.png") top center no-repeat;
   background-size:cover;
 }
 .signup .signup-box {
   text-align:center;
-  background-color: rgba(15, 113, 115, 1);
+  max-width:400px;
+  background-color: #fff;
+  border: 2px solid rgba(15, 113, 115, 1);
   padding:15px;
-  margin: 20px 30% 50px 30%;
+  margin: 20px auto 50px;
 }
 .signup h2 {
   font-weight:600;
   margin-bottom:5px;
-  color:#fff;
+  color:rgba(15, 113, 115, 1);
 }
 .signup p {
-  color:#fff;
+  color:#333;
 }
 .signup .input {
   margin: 20px 0;
@@ -310,6 +310,8 @@ header nav ul > li.btn-outline:hover > a {
   display:block;
   margin: 15px 15%;
   text-align:center;
+  background-color:rgba(15, 113, 115, .2);
+  box-shadow: 0px 2px 0px 0px rgba(15, 113, 115,.5);
 }
 /* FOOTER */
 footer {
@@ -336,10 +338,10 @@ footer nav ul li a {
   color:#FFFFFF;
   text-decoration: none;
 }
-footer .right-footer-block {
-  background-color: transparent;
+.right-footer-block, .middle-footer-block, .left-footer-block {
+  margin:0px;
 }
-footer .logo{
+.logo{
   padding: 2.35em 0;
   margin: 0 auto;
   display: block;
@@ -350,23 +352,47 @@ footer .logo{
     width:750px;
   }
   header {
-    height:500px;
+    height:750px;
   }
   .hero {
     text-align:left;
   }
-  .one-half {
-    width:46%;
+  .one-third-body, .one-third-body-bottom, .one-fourth {
+    width:60%;
+    margin: 2% 20%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container {
+    width:970px;
+  }
+  header {
+    height:600px;
+  }
+  .hero h1 {
+    font-size:48px;
+    line-height: 60px;
   }
   .one-third {
+    display:inline-block;
     width:29.3333%;
     margin-top:50px;
     float:left;
   }
+  .one-third-body {
+    width:40%;
+    margin: 0 5%;
+  }
+  .one-third-body-bottom {
+    width:43%;
+    margin: 20px 28.5% 0;
+  }
   .one-fourth {
-    width:21%;
+    width:22%;
+    margin: 0 1.5%;
   }
   .two-thirds {
+    display:inline-block;
     width: 58.666%;
     float:right;
     margin-top: 80px;
@@ -390,17 +416,8 @@ footer .logo{
   .screenshot {
     max-width: 100%;
   }
-}
-@media screen and (min-width: 992px) {
-  .container {
-    width:970px;
-  }
-  header {
-    height:600px;
-  }
-  .hero h1 {
-    font-size:48px;
-    line-height: 60px;
+  .box {
+    min-height:350px;
   }
   footer{
      background-color: #3498DB;
@@ -412,26 +429,15 @@ footer .logo{
      padding: 2em 0;
      text-align: left;
    }
-   footer .right-footer-block {
+   .right-footer-block, .middle-footer-block, .left-footer-block {
      background-color: #007373;
+     margin-top:0px;
+     width:29%;
+     margin: auto 2%;
    }
    footer .logo{
      padding: 2em 0 2em 1.5em;
    }
-}
-.box {
-  min-height:439px;
-}
-.box h3 {
-  margin:0 -15px 40px;
-}
-.box h4 {
-  font-size:50px;
-  margin:40px 0 10px;
-}
-.box.middle {
-  min-height: 485px;
-  margin-top:0px;
 }
 @media screen and (min-width: 1200px) {
   .container {
@@ -440,5 +446,27 @@ footer .logo{
   .header {
     background-size: 100% auto;
     height:780px;
+  }
+  .one-third-body, .one-third-body-bottom {
+    width:29%;
+    margin: 0 2% 0;
+  }
+  .pricing ul {
+    margin:0 auto;
+    padding:2em 0;
+  }
+  .box {
+    min-height:439px;
+  }
+  .box h3 {
+    margin:0 -15px 40px;
+  }
+  .box h4 {
+    font-size:50px;
+    margin:40px 0 10px;
+  }
+  .box.middle {
+    min-height: 485px;
+    margin-top:0px;
   }
 }
