@@ -17,8 +17,6 @@
 <script defer src="js/fontawesome/fontawesome-all.js"></script>
   </head>
   <body class="dashboard">
-<!--RESPONSIVE NAV-->
-  <a href="#" class="hamburger" id="menu">&#9776;</a>
     <!--LEFT NAV-->
     <nav id="left-nav" class="left-nav">
       <a href="#" class="site-logo"><img src="images/logo.png"/> </a>
@@ -38,7 +36,7 @@
        </ul>
     </div>
     <div class="settings">
-      <ul id="settings" class="menu">
+      <ul class="menu account">
      <li>
        <a href="#"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/jina/128.jpg"></a>
          <ul>
@@ -47,7 +45,7 @@
          </ul>
      </li>
    </ul>
-     <p id="settings-name">Joey Kirk</p>
+     <p>Joey Kirk</p>
      <a href="#"><i class="fa fa-cog"></i></a>
    </div>
  </nav>
@@ -57,7 +55,7 @@
      <div class="container">
        <div class="header">
          <h1>All Items</h1>
-         <ul id="add" class="menu">
+         <ul class="menu">
          <li>
          <a href="#" class="btn btn-green">+ Add</a>
          <ul>
@@ -130,10 +128,7 @@
      </div>
    </section>
    <script type="text/javascript">
-     $("#add, #settings").dropit();
-     $("#menu").click(function(){
-       $("#left-nav").toggleClass("open", 200);
-     });
+     $(".menu, .account").dropit()
    </script>
   </body>
 </html>

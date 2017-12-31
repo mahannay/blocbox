@@ -475,13 +475,72 @@ footer nav ul li a {
     background: #F7F7F7;
 }
 .left-nav {
-  height:100vh;
-  width:14.66666667%;
+  height:100%;
+  width:280px;
   background-image: linear-gradient(-77deg, #D8EAEA 0%, #007373 51%);
-  float:left;
-  position:fixed;
-  display:block;
+  position:absolute;
+  -webkit-transition: all 0.3s ease-in-out;
+-moz-transition: all 0.3s ease-in-out;
+-o-transition: all 0.3s ease-in-out;
+transition: all 0.3s ease-in-out;
+transform: translate(-280px,0);
+  -webkit-transform: translate(-280px,0); /** Chrome & Safari **/
+  -o-transform: translate(-280px,0); /** Opera **/
+  -moz-transform: translate(-280px,0); /** Firefox **/
 }
+.left-nav.open {
+   display:block;
+   width:280px;
+   background: #007373;
+   background-image: linear-gradient(-77deg, #D8EAEA 0%, #007373 51%);
+   -webkit-transition: all 0.3s ease-in-out;
+   -moz-transition: all 0.3s ease-in-out;
+   -o-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+   transform: translate(0,0);
+     -webkit-transform: translate(0,0); /** Chrome & Safari **/
+     -o-transform: translate(0,0); /** Opera **/
+     -moz-transform: translate(0,0); /** Firefox **/
+     z-index: 100;
+ }
+ .hamburger {
+   position:absolute;
+   z-index: 1000;
+   background:#007373;
+   color:#FFF;
+   text-decoration: none;
+   font-size: 22px;
+   padding: 10px 15px;
+   border-radius: 4px;
+   left: 5px;
+   top: 15px;
+ }
+ @media (min-width:992px) {
+   .left-nav {
+     height: 100vh;
+     width:14.66666667%;
+     color:#FFFFFF;
+     background: #34495E;
+     background-image: linear-gradient(-77deg, #D8EAEA 0%, #007373 51%);
+     float:left;
+     position: fixed;
+     display:block;
+     transform: translate(0,0);
+     -webkit-transform: translate(0,0); /** Chrome & Safari **/
+     -o-transform: translate(0,0); /** Opera **/
+     -moz-transform: translate(0,0); /** Firefox **/
+   }
+   .left-nav.open {
+     width:14.66666667%;
+     transform: translate(0,0);
+     -webkit-transform: translate(0,0); /** Chrome & Safari **/
+     -o-transform: translate(0,0); /** Opera **/
+     -moz-transform: translate(0,0); /** Firefox **/
+   }
+   .hamburger {
+     display:none;
+   }
+ }
 .left-nav .site-logo {
   padding: 20px 0;
   display:block;
@@ -513,7 +572,7 @@ footer nav ul li a {
 .left-nav .items .active{
   background-color: #fff;
   margin:0 -7% 15px;
-  padding: 4% 4%;
+  padding: 4% 6%;
 }
 .left-nav .items .active a {
   background-color: rgba (0,0,0,1);
@@ -558,6 +617,11 @@ footer nav ul li a {
    float: right;
    margin-right:10px;
    margin-top:8px;
+ }
+ #settings-name {
+   vertical-align:none;
+   float:right;
+   margin-right:10px;
  }
 /* CONTENT */
 .content {
@@ -639,7 +703,6 @@ footer nav ul li a {
   .content > .container {
     width:auto;
   }
-}
   .content-item {
     width:23%;
     margin: 0 1% 25px;
@@ -652,6 +715,7 @@ footer nav ul li a {
     left:0;
     right:0;
   }
+}
   .item-box > h2{
     font-family: "Roboto", Helvetica, Arial, sans-serif;
     font-weight: 700;
